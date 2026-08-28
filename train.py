@@ -7,6 +7,10 @@ def train(mileages, prices, learning_rate=0.1, iterations=1000):
     m = len(mileages)
     max_mileages = mileages.max()
     min_mileages = mileages.min()
+    if(max_mileages == min_mileages):
+        print("Error: all mileages are identical, cannot train.")
+        exit()
+
     normalized_mileages = (mileages - min_mileages) / (max_mileages - min_mileages)
 
     for i in range(iterations) :

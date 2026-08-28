@@ -58,3 +58,4 @@ def get_mileage():
             return mileage
         except Exception:
             print("Invalid input, please enter a number.")
+
